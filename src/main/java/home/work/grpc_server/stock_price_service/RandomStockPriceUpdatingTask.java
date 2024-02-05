@@ -20,7 +20,10 @@ public class RandomStockPriceUpdatingTask implements Runnable {
     private void updateRandomStock() {
         var random = ThreadLocalRandom.current();
         var stocks = repository.getStocks();
-        var randomStock = stocks.stream().skip(random.nextInt(stocks.size())).findFirst().orElseThrow();
+        var randomStock = stocks.stream()
+                .skip(random.nextInt(stocks.size()))
+                .findFirst()
+                .orElseThrow();
         var newPrice = randomStock.getPrice() + random.nextDouble(-5.0, 5.0);
         randomStock.updatePrice(newPrice);
     }

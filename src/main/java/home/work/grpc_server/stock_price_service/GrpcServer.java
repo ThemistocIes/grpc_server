@@ -2,12 +2,14 @@ package home.work.grpc_server.stock_price_service;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 import java.util.concurrent.Executors;
 
+@Slf4j
 @GrpcService
 public class GrpcServer {
     @Bean
@@ -21,7 +23,7 @@ public class GrpcServer {
                 .build();
 
         server.start();
-        System.out.println("gRPC server started, listening on port:" + server.getPort());
+        log.info("gRPC server started, listening on port: {}", server.getPort());
         server.awaitTermination();
     }
 }
