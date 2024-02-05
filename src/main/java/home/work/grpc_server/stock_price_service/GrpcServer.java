@@ -13,7 +13,7 @@ public class GrpcServer {
     @Bean
     private void runGrpcServer() throws IOException, InterruptedException {
         DomainEvents.subscribe(new StockPriceChangedEventListener());
-        Executors.newFixedThreadPool(1).submit(new RandomStockPriceUpdatingTask());
+        Executors.newSingleThreadExecutor().submit(new RandomStockPriceUpdatingTask());
 
         Server server = ServerBuilder
                 .forPort(8080)

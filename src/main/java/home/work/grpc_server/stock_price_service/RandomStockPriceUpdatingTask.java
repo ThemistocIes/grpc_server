@@ -10,7 +10,7 @@ public class RandomStockPriceUpdatingTask implements Runnable {
         while (true) {
             updateRandomStock();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
