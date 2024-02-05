@@ -4,15 +4,15 @@ package home.work.grpc_server;
 
 import "google/protobuf/empty.proto";
 
-message PriceRequest {
+message StockPriceRequest {
   string symbol = 1;
 }
 
-message PriceResponse {
+message StockPriceResponse {
   string symbol = 1;
   double price = 2;
 }
 
-service PriceService {
-  rpc GetPrice(PriceRequest) returns (stream PriceResponse);
+service StockPriceService {
+  rpc GetPrice(StockPriceRequest) returns (stream StockPriceResponse);
 }

@@ -1,4 +1,4 @@
-package home.work.grpc_server;
+package home.work.grpc_server.stock_price_service;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

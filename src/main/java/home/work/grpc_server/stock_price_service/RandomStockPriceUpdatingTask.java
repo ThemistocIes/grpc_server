@@ -1,10 +1,9 @@
-package home.work.grpc_server;
+package home.work.grpc_server.stock_price_service;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomStockPriceUpdatingTask implements Runnable {
-
-    //private final PriceRepository repository = PriceRepository.INSTANCE;
+    private final StockRepository repository = StockRepository.INSTANCE;
 
     @Override
     public void run() {
@@ -19,10 +18,10 @@ public class RandomStockPriceUpdatingTask implements Runnable {
     }
 
     private void updateRandomStock() {
-        /*var random = ThreadLocalRandom.current();
-        var stocks = repository.getPrices();
+        var random = ThreadLocalRandom.current();
+        var stocks = repository.getStocks();
         var randomStock = stocks.stream().skip(random.nextInt(stocks.size())).findFirst().orElseThrow();
         var newPrice = randomStock.getPrice() + random.nextDouble(-5.0, 5.0);
-        randomStock.updatePrice(newPrice);*/
+        randomStock.updatePrice(newPrice);
     }
 }
