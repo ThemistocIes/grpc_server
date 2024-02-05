@@ -2,11 +2,13 @@ package home.work.grpc_server.stock_price_service;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 import java.util.concurrent.Executors;
 
+@GrpcService
 public class GrpcServer {
     @Bean
     private void runGrpcServer() throws IOException, InterruptedException {
