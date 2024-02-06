@@ -45,27 +45,38 @@ dependencies {
 }
 
 protobuf {
-	protoc {artifact = "com.google.protobuf:protoc:3.25.2"}
-	plugins{
-		grpc {artifact = "io.grpc:protoc-gen-grpc-java:1.61.0"}
+	protoc {
+		artifact = "com.google.protobuf:protoc:3.25.2"
 	}
-	generateProtoTasks{
-		all()*.plugins {grpc {}}
+	plugins {
+		grpc {
+			artifact = "io.grpc:protoc-gen-grpc-java:1.61.0"
+		}
+	}
+	generateProtoTasks {
+		all()*.plugins {
+			grpc {}
+		}
 	}
 }
 
-sourceSets{
-	main{
-		proto{
+//proto path for generating files
+sourceSets {
+	main {
+		proto {
 			srcDirs 'src/main/proto'
 		}
-		java{
+		java {
 			srcDirs 'build/generated/source/proto/main/grpc'
 			srcDirs 'build/generated/source/proto/main/java'
 		}
 	}
 }
-tasks.withType(Copy).all {duplicatesStrategy 'exclude'}
+
+tasks.withType(Copy).all {
+	duplicatesStrategy 'exclude'
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
