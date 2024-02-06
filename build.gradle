@@ -24,9 +24,6 @@ repositories {
 
 dependencies {
 	// starters
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'net.devh', name: 'grpc-server-spring-boot-starter', version: '2.13.1.RELEASE'
