@@ -1,4 +1,4 @@
-package home.work.grpc_server.stock_price;
+package home.work.grpc_server.stock_prices;
 
 public class Stock {
     private final String symbol;
