@@ -1,4 +1,4 @@
-package home.work.grpc_server.stock_price_service;
+package home.work.grpc_server.stock_price;
 
 import home.work.grpc_server.StockPriceRequest;
 import home.work.grpc_server.StockPriceResponse;
