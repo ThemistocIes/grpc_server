@@ -1,4 +1,4 @@
-package home.work.grpc_server.stock_prices;
+package home.work.grpc_server.stock_prices.events_publication;
 
 import home.work.grpc_server.StockPriceResponse;
 import io.grpc.stub.StreamObserver;

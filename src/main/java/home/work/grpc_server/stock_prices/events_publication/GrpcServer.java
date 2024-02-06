@@ -1,5 +1,6 @@
-package home.work.grpc_server.stock_prices;
+package home.work.grpc_server.stock_prices.events_publication;
 
+import home.work.grpc_server.stock_prices.update_simulation.RandomStockPriceUpdatingTask;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import lombok.extern.slf4j.Slf4j;

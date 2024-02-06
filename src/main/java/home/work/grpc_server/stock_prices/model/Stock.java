@@ -1,4 +1,7 @@
-package home.work.grpc_server.stock_prices;
+package home.work.grpc_server.stock_prices.model;
+
+import home.work.grpc_server.stock_prices.events_publication.DomainEvents;
+import home.work.grpc_server.stock_prices.events_publication.StockPriceChangedEvent;
 
 public class Stock {
     private final String symbol;

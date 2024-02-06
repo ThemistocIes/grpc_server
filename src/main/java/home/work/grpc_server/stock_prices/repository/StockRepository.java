@@ -1,4 +1,6 @@
-package home.work.grpc_server.stock_prices;
+package home.work.grpc_server.stock_prices.repository;
+
+import home.work.grpc_server.stock_prices.model.Stock;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
