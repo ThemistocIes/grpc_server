@@ -1,4 +1,4 @@
-package home.work.grpc_server.stock_prices.model;
+package home.work.grpc_server.stock_prices;
 
 import home.work.grpc_server.stock_prices.events_publication.DomainEvents;
 import home.work.grpc_server.stock_prices.events_publication.StockPriceChangedEvent;

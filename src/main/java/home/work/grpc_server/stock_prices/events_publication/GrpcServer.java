@@ -1,6 +1,6 @@
 package home.work.grpc_server.stock_prices.events_publication;
 
-import home.work.grpc_server.stock_prices.update_simulation.RandomStockPriceUpdatingTask;
+import home.work.grpc_server.stock_prices.RandomStockPriceUpdatingTaskService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ public class GrpcServer {
     @Bean
     private void runGrpcServer() throws IOException, InterruptedException {
         DomainEvents.subscribe(new StockPriceChangedEventListener());
-        Executors.newSingleThreadExecutor().submit(new RandomStockPriceUpdatingTask());
+        Executors.newSingleThreadExecutor().submit(new RandomStockPriceUpdatingTaskService());
 
         Server server = ServerBuilder
                 .forPort(8080)

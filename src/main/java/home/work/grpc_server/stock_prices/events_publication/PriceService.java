@@ -3,7 +3,7 @@ package home.work.grpc_server.stock_prices.events_publication;
 import home.work.grpc_server.StockPriceRequest;
 import home.work.grpc_server.StockPriceResponse;
 import home.work.grpc_server.StockPriceServiceGrpc;
-import home.work.grpc_server.stock_prices.repository.StockRepository;
+import home.work.grpc_server.stock_prices.StockRepository;
 import io.grpc.Status;
 import io.grpc.StatusException;
 import io.grpc.stub.ServerCallStreamObserver;

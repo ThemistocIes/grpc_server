@@ -1,10 +1,8 @@
-package home.work.grpc_server.stock_prices.update_simulation;
-
-import home.work.grpc_server.stock_prices.repository.StockRepository;
+package home.work.grpc_server.stock_prices;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RandomStockPriceUpdatingTask implements Runnable {
+public class RandomStockPriceUpdatingTaskService implements Runnable {
     private final StockRepository repository = StockRepository.INSTANCE;
 
     @Override
