@@ -15,9 +15,7 @@ public enum StockPriceChangedSubject {
 
     public void register(String symbol, StreamObserver<StockPriceResponse> observer) {
         synchronized (MUTEX) {
-            observers
-                    .computeIfAbsent(symbol, k -> new ArrayList<>())
-                    .add(observer);
+            observers.computeIfAbsent(symbol, k -> new ArrayList<>()).add(observer);
         }
     }
 
