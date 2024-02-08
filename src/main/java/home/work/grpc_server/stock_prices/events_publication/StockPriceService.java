@@ -8,7 +8,6 @@ import io.grpc.Status;
 import io.grpc.StatusException;
 import io.grpc.stub.ServerCallStreamObserver;
 import io.grpc.stub.StreamObserver;
-import net.devh.boot.grpc.server.service.GrpcService;
 
 public class StockPriceService extends StockPriceServiceGrpc.StockPriceServiceImplBase {
     private final StockRepository repository = StockRepository.INSTANCE;
