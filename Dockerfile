@@ -1,5 +1,6 @@
-FROM openjdk:21
+FROM openjdk:21-jdk-alpine
 WORKDIR /stockPricesApp
-CMD ["./gradlew", "clean", "bootJar"]
-COPY build/libs/*.jar app.jar
+COPY build/libs/grpc_server-0.0.2.jar app.jar
+
 EXPOSE 8050
+ENTRYPOINT ["java","-jar","/grpc_server-0.0.2.jar"]
