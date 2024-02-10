@@ -1,4 +1,4 @@
-FROM openjdk:21.0.2
+FROM openjdk:21
 WORKDIR /grpc_server
 CMD ["./gradlew", "clean", "bootJar"]
 COPY build/libs/*.jar app.jar
